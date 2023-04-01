@@ -23,7 +23,7 @@ const DEFAULT_REFERRER_POLICY: ReferrerPolicy =
  * import {
  *   type Handler,
  *   referrerPolicy,
- * } from "https://deno.land/x/xcto_middleware@$VERSION/mod.ts";
+ * } from "https://deno.land/x/referrer_policy_middleware@$VERSION/mod.ts";
  * import { assert } from "https://deno.land/std/testing/asserts.ts";
  *
  * declare const request: Request;
