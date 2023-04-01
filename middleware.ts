@@ -11,28 +11,28 @@ export type ReferrerPolicies = readonly [PolicyToken, ...PolicyToken[]];
 const DEFAULT_REFERRER_POLICY: ReferrerPolicy =
   "strict-origin-when-cross-origin";
 
-/** Create `X-Content-Type-Options` header middleware.
+/** Create `Referrer-Policy` header middleware.
  *
- * Add `X-Content-Type-Options` header field to `Response`.
+ * Add `Referrer-Policy` header field to `Response`.
  * ```http
- * X-Content-Type-Options: nosniff
+ * Referrer-Policy: strict-origin-when-cross-origin
  * ```
  *
  * @example
  * ```ts
  * import {
  *   type Handler,
- *   xcto,
+ *   referrerPolicy,
  * } from "https://deno.land/x/xcto_middleware@$VERSION/mod.ts";
  * import { assert } from "https://deno.land/std/testing/asserts.ts";
  *
  * declare const request: Request;
  * declare const handler: Handler;
  *
- * const middleware = xcto();
+ * const middleware = referrerPolicy();
  * const response = await middleware(request, handler);
  *
- * assert(response.headers.has("x-content-type-options"));
+ * assert(response.headers.has("referrer-policy"));
  * ```
  */
 export function referrerPolicy(
