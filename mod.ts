@@ -3,3 +3,4 @@
 
 export { referrerPolicy } from "./middleware.ts";
 export { type Handler, type Middleware } from "./deps.ts";
+export type { PolicyToken, PolicyTokens } from "./types.ts";

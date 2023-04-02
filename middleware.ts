@@ -1,15 +1,9 @@
 // Copyright 2023-latest the httpland authors. All rights reserved. MIT license.
 // This module is browser compatible.
 
-import { Header } from "./constants.ts";
+import { Directive, Header } from "./constants.ts";
 import { isString, Middleware, withHeader } from "./deps.ts";
-import type { PolicyToken } from "./types.ts";
-
-/** Multiple referrer policies. */
-export type ReferrerPolicies = readonly [PolicyToken, ...PolicyToken[]];
-
-const DEFAULT_REFERRER_POLICY: ReferrerPolicy =
-  "strict-origin-when-cross-origin";
+import type { PolicyTokens } from "./types.ts";
 
 /** Create `Referrer-Policy` header middleware.
  *
@@ -36,7 +30,8 @@ const DEFAULT_REFERRER_POLICY: ReferrerPolicy =
  * ```
  */
 export function referrerPolicy(
-  policy: ReferrerPolicy | ReferrerPolicies = DEFAULT_REFERRER_POLICY,
+  policy: ReferrerPolicy | Readonly<PolicyTokens> =
+    Directive.StrictOriginWhenCrossOrigin,
 ): Middleware {
   const fieldValue = isString(policy) ? policy : policy.join(", ");
 

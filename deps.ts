@@ -6,4 +6,4 @@ export {
   type Middleware,
 } from "https://deno.land/x/http_middleware@1.0.0/mod.ts";
 export { isString } from "https://deno.land/x/isx@1.1.1/is_string.ts";
-export { withHeader } from "https://deno.land/x/http_utils@1.0.0-beta.15/message.ts";
+export { withHeader } from "https://deno.land/x/http_utils@1.0.0/message.ts";
