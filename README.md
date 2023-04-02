@@ -12,7 +12,7 @@
 HTTP referrer policy middleware.
 
 Compliant with
-[Referrer Policy](https://w3c.github.io/webappsec-referrer-policy/#grammardef-extension-token).
+[Referrer Policy](https://w3c.github.io/webappsec-referrer-policy/).
 
 ## Middleware
 
