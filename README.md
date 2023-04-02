@@ -11,8 +11,7 @@
 
 HTTP referrer policy middleware.
 
-Compliant with
-[Referrer Policy](https://w3c.github.io/webappsec-referrer-policy/).
+Compliant with [Referrer Policy](https://www.w3.org/TR/referrer-policy/).
 
 ## Middleware
 
